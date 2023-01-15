@@ -1,0 +1,16 @@
+.none {
+    visibility: hidden;
+}
+
+.color-nav {
+    background-color: E3BAC6;
+}
+
+.link { 
+    color: #846267!important;
+    z-index: 5;
+}
+
+.navbar-toggler {
+    z-index: 5;
+}

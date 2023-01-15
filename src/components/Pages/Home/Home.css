@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500;700&family=Open+Sans:wght@300;600&family=Poppins:wght@600;700&display=swap');
+
+.maxwidth-none {
+    max-width: none!important;
+}
+
+html body {
+    background-color: transparent;
+}
+
+.calculator {
+    background-color: transparent;
+}
+
+.diagonal-box {
+	background-image: linear-gradient(45deg, #6303B1, #ff0099);
+} 
+.content {
+	max-width: 70em;
+	margin: 0 auto;
+	transform: skewY(11deg);
+}
+
+.diagonal-box {
+	background-image: linear-gradient(45deg, #6303B1, #ff0099);
+	transform: skewY(-11deg);
+}
+
+.diagonal-box {
+	background-image: linear-gradient(45deg, #654ea3, #eaafc8);
+	transform: skewY(-11deg);
+}
+
+
+
+.diagonal-box {
+    position: relative;
+    height: 40em;
+}
+
+.diagonal-box:before {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   background-image: linear-gradient(45deg, #654ea3, #eaafc8); 	
+   transform: skewY(-11deg);
+}
+
+.content {
+
+ 
+   margin: 0 auto;
+   position: relative;
+   top: 30%;
+   
+}
+
+.title {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0px;
+    color: white;
+}
+
+.color-button { 
+    background-color: #D89A9E!important;
+    border-color: #D89A9E!important;
+}
