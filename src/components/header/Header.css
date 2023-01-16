@@ -7,8 +7,9 @@
 }
 
 .link { 
-    color: #846267!important;
+    color: black!important;
     z-index: 5;
+    font-family: "karla", sans-serif;
 }
 
 .navbar-toggler {

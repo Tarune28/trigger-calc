@@ -1,0 +1,19 @@
+.page-footer {
+    background-color: #dbdbdb;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.list-unstyled li a {
+    color: black!important;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    color: black;
+}
+
+.list-unstyled {
+    display: flex;
+}

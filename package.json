@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.0.5",
     "bootstrap": "^5.2.3",
+    "cdbreact": "^1.5.4",
     "firebase": "^9.14.0",
     "firebase-admin": "^11.2.1",
     "firestore": "^1.1.6",
