@@ -39,13 +39,16 @@ function Header(props) {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-       <Nav.Link className={"link mx-3"} href="/home">
+        <Nav.Link className={"link mx-3"} href="/">
+          Home
+        </Nav.Link>
+       <Nav.Link className={"link mx-3"} href="/comingSoon">
          About
         </Nav.Link>
-       <Nav.Link className={"link mx-3"} href="/studentReports">
+       <Nav.Link className={"link mx-3"} href="/comingSoon">
           Ebook
         </Nav.Link>
-       <Nav.Link className={"link mx-3"} href="/dashboard">
+       <Nav.Link className={"link mx-3"} href="/comingSoon">
           Contact
          </Nav.Link>
         </Navbar.Collapse>

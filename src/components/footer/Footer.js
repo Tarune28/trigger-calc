@@ -19,10 +19,10 @@ const Footer = () => <footer className="page-footer font-small blue pt-4">
 
             <div className="col-md-3 mt-4 mx-auto align-middle">
                 <ul className="list-unstyled">
-                    <li><a className="mx-3" href="#!">About</a></li>
-                    <li><a className="mx-3" href="#!">EBook</a></li>
-                    <li><a className="mx-3" href="#!">Contact</a></li>
-                    <li><a className="mx-3" href="#!">Support</a></li>
+                    <li><a className="mx-3" href="/">Home</a></li>
+                    <li><a className="mx-3" href="/comingSoon">About</a></li>
+                    <li><a className="mx-3" href="/comingSoon">Ebook</a></li>
+                    <li><a className="mx-3" href="/comingSoon">Contact</a></li>
                 </ul>
             </div>
         </div>
