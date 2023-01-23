@@ -33,7 +33,21 @@ html body {
 }
 
 
+.red {
+    background-color: #9c2d2d!important;
+    color: white!important;
+}
 
+.yellow {
+    background-color: #aba627!important;
+    color: white!important;
+}
+
+
+.green {
+    background-color: #4d9946!important;
+    color: white!important;
+}
 
 .diagonal-box {
     position: relative;
@@ -77,4 +91,4 @@ html body {
 
 .par {
     text-align: start!important;
-}
+} 
