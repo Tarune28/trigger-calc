@@ -134,43 +134,43 @@ function Home() {
       if(metabolicRate == "SLOW") {
         if(daysAfter <= 11) {
           setResults([{"Text": "Not Reliable", "Color": "red"}])
-            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time. View further details below.");
+            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time.");
         }
         if(daysAfter > 11 && daysAfter <= 14) {
           setResults([{"Text": "Varying", "Color": "yellow"}])
-            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be. View further details below.");
+            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be.");
         }
         if(daysAfter >= 15) {
           setResults([{"Text": "Reliable!", "Color": "green"}])
-            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable. View further details below.");
+            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable.");
         }
       }
       if(metabolicRate == "AVERAGE") {
         if(daysAfter <= 9) {
           setResults([{"Text": "Not Reliable", "Color": "red"}])
-            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time. View further details below.");
+            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time.");
         }
         if(daysAfter >= 10 && daysAfter <= 12) {
           setResults([{"Text": "Varying", "Color": "yellow"}])
-            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be. View further details below.");
+            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be.");
         }
         if(daysAfter >= 13) {
           setResults([{"Text": "Reliable!", "Color": "green"}])
-            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable. View further details below.");
+            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable.");
         }
       }
       if(metabolicRate == "FAST") {
         if(daysAfter <= 7) {
           setResults([{"Text": "Not Reliable", "Color": "red"}])
-            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time. View further details below.");
+            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time.");
         }
         if(daysAfter >= 8 && daysAfter <= 9) {
           setResults([{"Text": "Varying", "Color": "yellow"}])
-            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be. View further details below.");
+            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be.");
         }
         if(daysAfter >= 10) {
           setResults([{"Text": "Reliable!", "Color": "green"}])
-            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable. View further details below.");
+            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable.");
         }
       }
       
@@ -183,7 +183,7 @@ function Home() {
         if(metabolicRate == "SLOW") {
           if(daysAfter <= 10) {
             setResults([{"Text": "Not Reliable", "Color": "red"}])
-            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time. View further details below.");
+            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time.");
           }
           if(daysAfter >= 11 && daysAfter <= 12) {
             setResults([{"Text": "Questionable", "Color": "yellow"}])
@@ -191,32 +191,32 @@ function Home() {
           }
           if(daysAfter > 12 && daysAfter <= 14) {
             setResults([{"Text": "Varying", "Color": "yellow"}])
-            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be. View further details below.");
+            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be.");
           }
           if(daysAfter >= 15) {
             setResults([{"Text": "Reliable!", "Color": "green"}])
-            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable. View further details below.");
+            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable.");
             
           }
         }
         if(metabolicRate == "AVERAGE") {
           if(daysAfter <= 9) {
             setResults([{"Text": "Not Reliable", "Color": "red"}])
-            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time. View further details below.");
+            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time.");
           }
           if(daysAfter >= 10 && daysAfter <= 11) {
             setResults([{"Text": "Varying", "Color": "yellow"}])
-            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be. View further details below.");
+            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be.");
           }
           if(daysAfter >= 12) {
             setResults([{"Text": "Reliable!", "Color": "green"}])
-            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable. View further details below.");
+            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable.");
           }
         }
         if(metabolicRate == "FAST") {
           if(daysAfter <= 7) {
             setResults([{"Text": "Not Reliable", "Color": "red"}])
-            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time. View further details below.");
+            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time.");
           }
           if(daysAfter == 8) {
             setResults([{"Text": "Questionable", "Color": "yellow"}])
@@ -224,11 +224,11 @@ function Home() {
           }
           if(daysAfter == 9) {
             setResults([{"Text": "Varying", "Color": "yellow"}])
-            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be. View further details below.");
+            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be.");
           }
           if(daysAfter >= 10) {
             setResults([{"Text": "Reliable!", "Color": "green"}])
-            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable. View further details below.");
+            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable.");
           }
         }
       }
@@ -237,44 +237,44 @@ function Home() {
         if(metabolicRate == "SLOW") {
           if(daysAfter <= 12) {
             setResults([{"Text": "Not Reliable", "Color": "red"}])
-            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time. View further details below.");
+            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time.");
           }
           if(daysAfter > 12 && daysAfter <= 14) {
             setResults([{"Text": "Varying", "Color": "yellow"}])
-            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be. View further details below.");
+            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be.");
           }
           if(daysAfter >= 15) {
             setResults([{"Text": "Reliable!", "Color": "green"}])
-            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable. View further details below.");
+            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable.");
           }
         }
         if(metabolicRate == "AVERAGE") {
           if(daysAfter <= 10) {
             setResults([{"Text": "Not Reliable", "Color": "red"}])
-            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time. View further details below.");
+            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time.");
           }
           if(daysAfter > 10 && daysAfter <= 12) {
             setResults([{"Text": "Varying", "Color": "yellow"}])
-            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be. View further details below.");
+            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be.");
           }
           if(daysAfter >= 13) {
             setResults([{"Text": "Reliable!", "Color": "green"}])
-            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable. View further details below.");
+            setDescription("Based on the inputs provided, all pregnancy tests on the market over 25MlU/mL should be reliable.");
           }
         }
         if(metabolicRate == "FAST") {
           
           if(daysAfter <= 9) {
             setResults([{"Text": "Not Reliable", "Color": "red"}])
-            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time. View further details below.");
+            setDescription("Based on the inputs provided, a pregnancy test will not be reliable at this time.");
           }
           if(daysAfter == 10) {
             setResults([{"Text": "Varying", "Color": "yellow"}])
-            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be. View further details below.");
+            setDescription("Based on the inputs provided, pregnancy tests with a 25MlU/mL sensitivity will be reliable, but a 6.5 MlU/mL will not be.");
           }
           if(daysAfter >= 11) {
             setResults([{"Text": "Reliable!", "Color": "green"}])
-            setDescription("Based on the inputs provided, all pregnancy tests on the market should be reliable. View further details below.");
+            setDescription("Based on the inputs provided, all pregnancy tests on the market should be reliable.");
           }
         }
       }
@@ -301,10 +301,10 @@ function Home() {
       <div className="diagonal-box">
         <div className="content my-auto align-middle">
           <Form className="calculator col-8 my-auto mx-auto" onSubmit={calculate}>
-            <h2 className="title pb-2">Calculate Testing Time</h2>
+            <h2 className="title pb-2">Calculate Reliable Time</h2>
             <Form.Group className="mb-3">
-              <Row>
-                <Col>
+              <Row lg>
+                <Col className="pt-3">
                   <Form.Select
                     as="select"
                     value={medication}
@@ -321,7 +321,7 @@ function Home() {
                     <option value="PREGNYL">Pregnyl</option>
                   </Form.Select>
                 </Col>
-                <Col>
+                <Col md="auto" className="pt-3 pl-2">
                   <InputGroup className="">
                     <Form.Select
                     as="select"
@@ -351,7 +351,7 @@ function Home() {
               <InputGroup>
                 <Form.Control
                   type="number"
-                  placeholder="Enter days"
+                  placeholder="Days"
                   value={daysAfter}
                   onChange={(e) => {
                     setCurrentDaysAfter(e.target.value);
@@ -361,7 +361,7 @@ function Home() {
  
 
                 <InputGroup.Text className="dark">
-                  days from previous trigger
+                  from last trigger
                 </InputGroup.Text>
               </InputGroup>
             </Form.Group>
@@ -384,7 +384,7 @@ function Home() {
               </InputGroup>
             </Form.Group>
 
-            <Button type='submit' variant="dark">
+            <Button type='submit' variant="outline-dark">
               Calculate
             </Button>
           </Form>
@@ -400,7 +400,8 @@ function Home() {
           This calculator was developed to offer additional information to moms-to-be everywhere who are taking trigger shots to help improve chances of conception. Since no other online services provided an easy method to offer this type of information, TriggerCalc was created.
           </p>
           <p className="par">
-          This calculator was developed to offer additional information to moms-to-be everywhere who are taking trigger shots to help improve chances of conception. After noticing that no other online services provided an easy method to offer this type of information, TriggerCalc was created.
+          It is our hope that, using the pharmacology science behind the trigger shots, the calculator estimates will assist in reducing the stress and anxiety that often accompany the prospect of false-positive pregnancy tests. 
+
           </p>
         </Col>
       </Container>
