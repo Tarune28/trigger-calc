@@ -72,6 +72,9 @@ function Home() {
 
   function hideResults() {
     setResultsModal(false);
+  }
+
+  function clearFields() {
     setCurrentDaysAfter(NaN);
     setMedication("");
     setMetabolicmetabolicRate("");
@@ -116,6 +119,13 @@ function Home() {
         "label": "USP"
       }]
     }
+    if(brand == "null") {
+     dosages = [{
+        "value": "Select Dosage",
+        "label": "Units"}
+      ]
+    }
+    console.log(brand)
     setDosage(dosages);
     return(dosages[0].value);
   }
@@ -383,10 +393,13 @@ function Home() {
              
               </InputGroup>
             </Form.Group>
-
+            
             <Button type='submit' variant="outline-dark">
               Calculate
             </Button>
+            <Button variant="outline-dark" onClick={clearFields} className="mx-2">
+            Clear
+          </Button>
           </Form>
         </div>
       </div>
@@ -468,6 +481,7 @@ function Home() {
                 
           </Modal.Body>
         <Modal.Footer>
+        
           <Button variant="secondary" onClick={hideResults}>
             Close
           </Button>
