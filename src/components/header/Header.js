@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import moment from "moment";
-import MomentUtils from "../../utils/MomentUtils";
-import RequestUtils from "../../utils/RequestUtils";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -15,6 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../../TriggerCalc.png";
 import "./Header.css";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 
 function Header(props) {
   let [currentTabName, setCurrentTabName] = useState("");
@@ -48,7 +41,7 @@ function Header(props) {
        <Nav.Link className={"link mx-3"} href="/comingSoon">
           Ebook
         </Nav.Link>
-       <Nav.Link className={"link mx-3"} href="/comingSoon">
+       <Nav.Link className={"link mx-3"} href={""}>
           Contact
          </Nav.Link>
         </Navbar.Collapse>

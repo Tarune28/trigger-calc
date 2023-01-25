@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-
+import { useForm, ValidationError } from '@formspree/react';
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -18,24 +18,23 @@ import { Tag } from "antd";
 import { Dropdown, InputGroup, DropdownButton } from "react-bootstrap";
 import Footer from "../../footer/Footer";
 import Header from "../../header/Header";
+import logo from "../../../TriggerCalc.png";
 
 function Home() {
   /**  State Variables **/
 
   // State: hold a list of events
 
-  let [search, setSearch] = useState("");
+  
 
   let [metabolicRate, setMetabolicmetabolicRate] = useState("");
 
   let [daysAfter, setCurrentDaysAfter] = useState(null);
 
-  let [currentLocationName, setCurrentLocationName] = useState("");
+  let [emailModal, setEmailModal] = useState(false);
 
-  let [currentKeepEvent, setCurrentKeepEvent] = useState(false);
+  let [comingSoonModal, setComingSoonModal] = useState(false);
 
-  // Data type of startDateTime IN DB is String: MM/DD/YY hh:mm A
-  // Data type of startDateTime IN APPLICATION is Moment object
   let [currentStartDateTime, setCurrentStartDateTime] = useState(
     MomentUtils.roundUp(moment(new Date()), "hour")
   );
@@ -59,6 +58,34 @@ function Home() {
 
   let [resultsModal, setResultsModal] = useState(false);
 
+  let [confirmationModal, setConfirmationModal] = useState(false);
+
+  const [state, handleSubmit] = useForm("xyyazrdp");
+
+
+  function hideComingSoonModal() {
+    setComingSoonModal(false);
+  }
+  function showComingSoonModal() {
+    setComingSoonModal(true);
+  }
+
+  function hideEmailModal() {
+    setEmailModal(false);
+  }
+  
+  function showEmailModal() {
+    setEmailModal(true);
+  }
+
+  function showConfirmation() {
+    setConfirmationModal(true);
+  }
+
+  function hideConfirmation() {
+    setConfirmationModal(false);
+  }
+
   function showResults() {
     if(medication =="" || metabolicRate == "" || daysAfter == null || selectedDossage == null) {
       alert("Please fill out all fields");
@@ -73,6 +100,8 @@ function Home() {
   function hideResults() {
     setResultsModal(false);
   }
+
+  
 
   function clearFields() {
     setCurrentDaysAfter(NaN);
@@ -307,7 +336,33 @@ function Home() {
 
   return (
     <>
-      <Header></Header>
+      <Navbar expand="lg">
+      <Container>
+      <Navbar.Brand href="#home">
+         <img
+          src={logo}
+          width="300"
+          className="d-inline-block align-top mx-2"
+          alt="React Bootstrap logo"
+        />
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+        <Nav.Link className={"link mx-3"} href="/">
+          Home
+        </Nav.Link>
+       <Nav.Link className={"link mx-3"} href="#target">
+         About
+        </Nav.Link>
+       <Nav.Link className={"link mx-3"} onClick={showComingSoonModal}>
+          Ebook
+        </Nav.Link>
+       <Nav.Link className={"link mx-3"} onClick={showEmailModal}>
+          Contact
+         </Nav.Link>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
       <div className="diagonal-box">
         <div className="content my-auto align-middle">
           <Form className="calculator col-8 my-auto mx-auto" onSubmit={calculate}>
@@ -405,7 +460,7 @@ function Home() {
       </div>
       <Container className="ab pt-5 mt-3 pb-2">
         <Col md={{ span: 6, offset: 3 }}>
-          <h2 className="text-center">About TriggerCalc</h2>
+          <h2 className="text-center" id="target">About TriggerCalc</h2>
           <p className="par">
           With the numerous hormones and medications required during fertility procedures, women struggling with infertility do not go through the traditional conception and pregnancy process. 
           </p>
@@ -459,7 +514,7 @@ function Home() {
           </p>
         </Col>
       </Container>
-      <Modal show={resultsModal} onHide={hideResults}>
+      <Modal show={resultsModal} onHide={hideResults} centered>
         <Modal.Header closeButton>
           <Modal.Title>
 
@@ -487,7 +542,109 @@ function Home() {
           </Button>
         </Modal.Footer>
       </Modal>
-      <Footer></Footer>
+
+
+      <Modal show={emailModal} onHide={hideEmailModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>
+            Contact Us!
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="justify-content-center align-items-center">
+          <Form onSubmit={handleSubmit}>
+      <label htmlFor="email">
+        Email Address
+      </label>
+      <Form.Control
+        id="email"
+        type="email" 
+        name="email"
+      />
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+      <br></br>
+      <label htmlFor="email">
+        Message
+      </label>
+      <Form.Control
+        id="message"
+        name="message"
+        as="textarea" rows={3}
+      />
+      <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
+      <br></br>
+      <Button type="submit" variant="outline-dark" disabled={state.submitting} onClick={hideEmailModal}>
+        Submit
+      </Button>
+      
+    </Form>
+               
+
+          </div>
+          
+                
+          </Modal.Body>
+        <Modal.Footer>
+      
+        </Modal.Footer>
+      </Modal>
+
+
+      <Modal show={comingSoonModal} onHide={hideComingSoonModal} centered>
+        <Modal.Header closeButton>
+          Page Under Construction
+        </Modal.Header>
+
+        <Modal.Body>
+          <div className="justify-content-center align-items-center mx-3 my-3">
+          <h4>Coming Soon!</h4>
+
+          </div>
+          
+                
+          </Modal.Body>
+  
+      </Modal>
+
+
+      <footer className="page-footer font-small blue pt-4">
+    <div className="container-fluid text-center text-md-left justify-content-center">
+        <div className="row">
+            <div className="col-md-6 mt-md-0 mt-3">
+            <img
+          src={logo}
+          width="300"
+          className="d-inline-block align-top mx-2"
+          alt="React Bootstrap logo"
+        />
+            </div>
+
+            <hr className="clearfix w-100 d-md-none pb-0"/>
+
+
+            <div className="col-lg-3 mt-4 mx-auto mb-4">
+                <div className="list-unstyled">
+                    <li><a className="mx-3" href="/">Home</a></li>
+                    <li><a className="mx-3" href="#target">About</a></li>
+                    <li><a className="mx-3" onClick={showComingSoonModal}>Ebook</a></li>
+                    <li><a className="mx-3" onClick={showEmailModal}>Contact</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div className="footer-copyright text-center py-3">© 2023 Copyright TriggerCalc
+    </div>
+
+</footer>
     </>
   );
 }
