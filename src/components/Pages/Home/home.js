@@ -354,17 +354,19 @@ function Home() {
        <Nav.Link className={"link mx-3"} href="#target">
          About
         </Nav.Link>
-       <Nav.Link className={"link mx-3"} onClick={showComingSoonModal}>
+       {/* <Nav.Link className={"link mx-3"} onClick={showComingSoonModal}>
           Ebook
-        </Nav.Link>
+        </Nav.Link> */}
        <Nav.Link className={"link mx-3"} onClick={showEmailModal}>
           Contact
          </Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
       <div className="diagonal-box">
         <div className="content my-auto align-middle">
+          
           <Form className="calculator col-8 my-auto mx-auto" onSubmit={calculate}>
             <h2 className="title pb-2">Calculate Reliable Time</h2>
             <Form.Group className="mb-3">
@@ -459,6 +461,7 @@ function Home() {
         </div>
       </div>
       <Container className="ab pt-5 mt-3 pb-2">
+        
         <Col md={{ span: 6, offset: 3 }}>
           <h2 className="text-center" id="target">About TriggerCalc</h2>
           <p className="par">
@@ -634,7 +637,7 @@ function Home() {
                 <div className="list-unstyled">
                     <li><a className="mx-3" href="/">Home</a></li>
                     <li><a className="mx-3" href="#target">About</a></li>
-                    <li><a className="mx-3" onClick={showComingSoonModal}>Ebook</a></li>
+                    {/* <li><a className="mx-3" onClick={showComingSoonModal}>Ebook</a></li> */}
                     <li><a className="mx-3" onClick={showEmailModal}>Contact</a></li>
                 </div>
             </div>
